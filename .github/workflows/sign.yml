@@ -1,0 +1,17 @@
+name: Sign
+
+on:
+    workflow_dispatch:
+    schedule:
+    - cron: '33 22 * * *'
+
+jobs:
+    sign:
+        runs-on: ubuntu-latest
+        steps:
+            - run: |
+                git clone https://github.com/HaneRo/skland_arknights_checkin --depth=1
+                cd skland_arknights_checkin
+                python3 skland_arknights_checkin.py
+              env: 
+                skland_cred: ${{ secrets.SKLAND_CRED }}
