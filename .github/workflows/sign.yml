@@ -3,7 +3,7 @@ name: Sign
 on:
     workflow_dispatch:
     schedule:
-    - cron: '33 22 * * *'
+    - cron: '37 22 * * *'
 
 jobs:
     sign:
@@ -15,3 +15,4 @@ jobs:
                 python3 skland_arknights_checkin.py
               env: 
                 skland_cred: ${{ secrets.SKLAND_CRED }}
+                skland_content: ${{ secrets.SKLAND_CONTENT }}
