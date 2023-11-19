@@ -10,7 +10,7 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: |
-                git clone https://github.com/HaneRo/skland_arknights_checkin --depth=1
+                git clone https://github.com/A-JiuA/skland_arknights_checkin --depth=1
                 cd skland_arknights_checkin
                 python3 skland_arknights_checkin.py
               env: 
